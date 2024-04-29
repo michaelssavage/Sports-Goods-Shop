@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { ShopDataContext } from "../context/products.context";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import styles from "../assets/styles/Navbar.module.css";
 
 export const Navbar = () => {
@@ -27,20 +27,30 @@ export const Navbar = () => {
           <img
             src={shopData.logo}
             alt="sports good shop logo"
-            height="50px"
-            width="100px"
+            height="65px"
+            width="90px"
           />
         </Link>
         <ul className={styles.navItems}>
           <li>
-            <Link to="/" className={styles.header}>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                `${isActive ? styles.active : ""} ${styles.header}`
+              }
+            >
               <p>Home</p>
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/create" className={styles.header}>
+            <NavLink
+              to="/create"
+              className={({ isActive }) =>
+                `${isActive ? styles.active : ""} ${styles.header}`
+              }
+            >
               Create New Ad
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </div>

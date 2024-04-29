@@ -40,7 +40,7 @@ Structure of Ad:
 2. There are a lot to take note of so I created a Trello board to keep track of work.
 3. The products are outlined in the json. Every product gets displayed from this 1 JSON file.
 4. React Context is needed for going between create, read, and update views.
-5. I could create an ad and store it in a database. Do I have time to setup postgresql and a backend?
+5. I could create an ad and store it in a postgresql database but I don't have much time. I will use a CSV instead.
 6. If no ads exist for a product on the Read page, then show a notification.
 
 ## Changes

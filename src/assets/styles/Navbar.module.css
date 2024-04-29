@@ -45,3 +45,8 @@
   text-transform: uppercase;
   z-index: 20;
 }
+
+.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
