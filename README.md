@@ -47,3 +47,4 @@ Structure of Ad:
 
 1. I added a productId to the shop_data array items.
 2. I used Vite instead of Create React App as it's deprecated / not encouraged by React.
+3. Typescript can't be used but I added prop-types.
