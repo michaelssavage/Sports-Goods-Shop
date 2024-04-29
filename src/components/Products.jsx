@@ -1,6 +1,7 @@
 import { PropTypes } from "prop-types";
-import styles from "../assets/styles/Products.module.css";
-import { randomID } from "../utils/randomID";
+import { Link } from "react-router-dom";
+import styles from "src/assets/styles/Products.module.css";
+import { randomID } from "src/utils/randomID";
 
 const generateBenefits = (description) => {
   const items = description.split("\n- ");
@@ -35,7 +36,9 @@ export const Products = ({ products }) => {
                     {generateBenefits(product.productDescription)}
                   </div>
                   <p className={styles.price}>€{product.price}</p>
-                  <button className={styles.button}>Open</button>
+                  <Link to={`/view/${product.productId}`}>
+                    <button className={styles.button}>Open</button>
+                  </Link>
                 </div>
               </div>
             </div>

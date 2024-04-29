@@ -1,5 +1,5 @@
 import { createContext, useMemo, useState } from "react";
-import data from "../assets/shop_data.json";
+import data from "src/assets/shop_data.json";
 import PropTypes from "prop-types";
 
 export const ShopDataContext = createContext({

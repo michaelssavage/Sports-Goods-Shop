@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { ErrorPage } from "../pages/ErrorPage";
+import { ErrorPage } from "src/pages/ErrorPage";
 import PropTypes from "prop-types";
 
 class ErrorBoundary extends Component {

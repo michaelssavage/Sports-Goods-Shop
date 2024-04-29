@@ -15,6 +15,7 @@ This CRUD tool enables you to:
 
 Structure of Ad:
 
+- Product Id: `string`
 - Array of Pictures: `Array<string>`
 - Description: `string`
 - Headline: `string`

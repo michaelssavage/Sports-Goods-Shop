@@ -5,7 +5,7 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color: #213547;
+  color: #0e161e;
   background-color: #fafffc;
 
   font-synthesis: none;
@@ -55,11 +55,15 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  background-color: #1a1a1a;
+  background-color: #4b51c0;
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+#error-page {
+  margin: 20vh 4rem;
 }
 
 .container {

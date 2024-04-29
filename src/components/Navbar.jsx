@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
-import { ShopDataContext } from "../context/products.context";
+import { ShopDataContext } from "src/context/products.context";
 import { Link, NavLink } from "react-router-dom";
-import styles from "../assets/styles/Navbar.module.css";
+import styles from "src/assets/styles/Navbar.module.css";
 
 export const Navbar = () => {
   const { shopData } = useContext(ShopDataContext);

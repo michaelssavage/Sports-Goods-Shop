@@ -8,6 +8,7 @@ import { ErrorPage } from "./pages/ErrorPage";
 import { ShopDataContextProvider } from "./context/products.context";
 import { Create } from "./pages/Create";
 import ErrorBoundary from "./components/ErrorBoundary";
+import { View } from "./pages/View";
 
 const router = createBrowserRouter([
   {
@@ -20,8 +21,12 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/create",
+        path: "/create/:id",
         element: <Create />,
+      },
+      {
+        path: "/view/:id",
+        element: <View />,
       },
     ],
   },
