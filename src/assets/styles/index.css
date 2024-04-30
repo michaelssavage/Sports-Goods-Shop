@@ -1,12 +1,29 @@
 @import url("defaults.css");
 
 :root {
+  --white: #fafffc;
+  --black: #0e161e;
+  --modal: rgba(16, 16, 17, 0.9);
+  --brand-orange: #deb76a;
+  --brand-blue: #646cff;
+  --brand-blue-hover: #4b51c0;
+
+  --error-notification: #ff4949;
+  --success-notification: #2ba22b;
+
+  --fb-border: #dddfe2;
+  --fb-main-text: #616770;
+  --fb-secondary-text: #65676b;
+  --fb-preview: #f0f2f5;
+  --fb-btn: #e4e6eb;
+  --fb-btn-hover: #88898b;
+
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  color: #0e161e;
-  background-color: #fafffc;
+  color: var(--black);
+  background-color: var(--white);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -25,11 +42,10 @@
 
 a {
   font-weight: 500;
-  color: #161535;
+  color: var(--black);
   text-decoration: inherit;
 }
 a:hover {
-  color: #302e71;
   transform: scale(1.02);
 }
 
@@ -49,13 +65,13 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  color: #fafffc;
-  background-color: #646cff;
+  color: var(--white);
+  background-color: var(--brand-blue);
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
-  background-color: #4b51c0;
+  background-color: var(--brand-blue-hover);
 }
 button:focus,
 button:focus-visible {

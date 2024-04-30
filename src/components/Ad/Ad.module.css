@@ -1,8 +1,8 @@
 .card {
-  border: 1px solid #dddfe2;
+  border: 1px solid var(--fb-border);
   border-radius: 3px;
   box-shadow: none;
-  background-color: #fff;
+  background-color: #ffffff;
   width: 40%;
 }
 
@@ -18,7 +18,7 @@
 }
 
 .logo > img {
-  border: 1px solid #ccc;
+  border: 1px solid var(--fb-border);
   border-radius: 50%;
   cursor: pointer;
   height: 40px;
@@ -34,7 +34,7 @@
 
 .sponsored {
   align-items: center;
-  color: var(--facebook-secondary-color);
+  color: var(--fb-secondary-text);
   display: flex;
   gap: 0.25rem;
   font-size: 13px;
@@ -50,7 +50,7 @@
 .sponsored > svg {
   height: 13px;
   width: 13px;
-  color: #65676b;
+  color: var(--fb-secondary-text);
 }
 
 .ellipsis {
@@ -60,7 +60,7 @@
 }
 
 .ellipsis > svg {
-  color: #65676b;
+  color: var(--fb-secondary-text);
 }
 
 .cta {
@@ -69,8 +69,8 @@
 
 .preview {
   align-items: center;
-  background-color: #f0f2f5;
-  border-bottom: 1px solid #dddfe2;
+  background-color: var(--fb-preview);
+  border-bottom: 1px solid var(--fb-border);
   cursor: pointer;
   display: flex;
   margin: 0;
@@ -87,7 +87,7 @@
 }
 
 .displayLink {
-  color: #65676b;
+  color: var(--fb-secondary-text);
   display: inline-block;
   font-size: 13px;
   line-height: 1.2308;
@@ -100,7 +100,7 @@
 }
 
 .description {
-  color: #65676b;
+  color: var(--fb-secondary-text);
   display: block;
   font-weight: 400;
   line-height: 1.3333;
@@ -113,8 +113,8 @@
 
 .adBtn {
   cursor: pointer;
-  color: #050505;
-  background-color: #e4e6eb;
+  color: var(--black);
+  background-color: var(--fb-btn);
   border-radius: 6px;
   flex-wrap: nowrap;
   font-weight: 600;
@@ -126,12 +126,12 @@
 }
 
 .adBtn:hover {
-  background-color: #757679;
+  background-color: var(--fb-btn-hover);
 }
 
 .actions {
   align-items: center;
-  color: #616770;
+  color: var(--fb-main-text);
   display: flex;
   flex-direction: row;
   flex-grow: 1;
@@ -151,5 +151,5 @@
   height: 32px;
   justify-content: center;
   padding: 0 2px;
-  color: #616770;
+  color: var(--fb-main-text);
 }

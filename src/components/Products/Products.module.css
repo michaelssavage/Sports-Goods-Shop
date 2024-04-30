@@ -1,7 +1,7 @@
 .card {
   border-radius: 0.25rem;
-  background-color: #0e161e;
-  color: #fafffc;
+  background-color: var(--black);
+  color: var(--white);
   padding-top: 0.5rem;
   overflow: hidden;
 }
@@ -25,7 +25,7 @@
   position: absolute;
   top: -24px;
   left: 0;
-  background-color: #0e161e;
+  background-color: var(--black);
   border-radius: 0.25rem;
   padding: 0.25rem 0.5rem;
 }
@@ -38,7 +38,7 @@
   position: absolute;
   top: -24px;
   right: 0;
-  background-color: #0e161e;
+  background-color: var(--black);
   border-radius: 0.25rem;
   padding: 0.25rem 0.5rem;
 }

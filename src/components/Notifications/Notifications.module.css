@@ -24,10 +24,10 @@
   border-radius: 0.675rem;
   width: 300px;
   padding: 0.5rem;
-  color: #fafffc;
-  background: #191919;
+  color: var(--white);
+  background: var(--black);
   position: relative;
-  box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: -1px 1px 3px var(--modal);
 }
 
 .notification div {
@@ -37,10 +37,10 @@
   gap: 0.5rem;
 }
 .error {
-  background: #ff4949;
+  background: var(--error-notification);
 }
 .success {
-  background: #2ba22b;
+  background: var(--success-notification);
 }
 
 .title {
@@ -58,7 +58,7 @@
 
 .close:hover {
   background-color: transparent;
-  border: 1px solid #fafffc;
+  border: 1px solid var(--white);
 }
 
 @keyframes slideIn {

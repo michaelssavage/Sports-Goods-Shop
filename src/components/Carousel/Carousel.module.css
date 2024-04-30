@@ -19,8 +19,8 @@
 }
 .left,
 .right {
-  background-color: #dddfe2;
-  color: #1e1e1e;
+  background-color: var(--black);
+  color: var(--fb-btn);
   padding: 10px 8px 8px 13px;
   margin: 0 20px;
   border-radius: 50%;
@@ -43,7 +43,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  color: #1e1e1e;
+  color: var(--fb-btn);
   min-height: 25px;
   min-width: 25px;
 }
@@ -51,7 +51,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  color: #1e1e1e;
+  color: var(--fb-btn);
   min-height: 25px;
   min-width: 25px;
 }

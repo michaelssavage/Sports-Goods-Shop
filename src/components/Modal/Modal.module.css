@@ -1,5 +1,5 @@
 .root {
-  background-color: rgba(16, 16, 17, 0.9);
+  background-color: var(--modal);
   position: fixed;
   z-index: 100;
   top: 0;
@@ -17,8 +17,8 @@
   border-radius: 0.25rem;
   transform-origin: center center;
   animation: slideIn 0.25s;
-  color: #191919;
-  background-color: #fafffc;
+  color: var(--black);
+  background-color: var(--white);
 }
 
 .close {
@@ -32,11 +32,11 @@
 
 .close:hover {
   background-color: transparent;
-  border: 1px solid #191919;
+  border: 1px solid var(--black);
 }
 
 .title {
-  color: #191919;
+  color: var(--black);
   gap: 0.5rem;
   text-align: center;
   font-size: 3rem;

@@ -1,5 +1,5 @@
 .scroll {
-  background-color: #deb76a;
+  background-color: var(--brand-orange);
   animation: changeColor 0.5s;
 }
 
@@ -8,7 +8,7 @@
     background-color: transparent;
   }
   100% {
-    background-color: #deb76a;
+    background-color: var(--brand-orange);
   }
 }
 

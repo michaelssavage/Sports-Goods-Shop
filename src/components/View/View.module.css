@@ -10,12 +10,12 @@
 }
 
 .cancel {
-  background-color: #fafffc;
-  color: #646cff;
-  border: 1px solid #646cff;
+  background-color: var(--white);
+  color: var(--white);
+  border: 1px solid var(--brand-blue);
 }
 .cancel:hover {
-  color: #fafffc;
-  background-color: #4b51c0;
-  border: 1px solid #4b51c0;
+  color: var(--white);
+  background-color: var(--brand-blue-hover);
+  border: 1px solid var(--brand-blue-hover);
 }
