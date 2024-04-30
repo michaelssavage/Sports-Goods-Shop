@@ -35,19 +35,24 @@ Structure of Ad:
 
 **Navigation View**: Navbar with react-router
 
-## Thoughts
+## Early Thoughts
 
 1. Multiple ads can exist for 1 product. Just not complete duplicates I assume.
-2. There are a lot to take note of so I created a Trello board to keep track of work.
-3. The products are outlined in the json. Every product gets displayed from this 1 JSON file.
-4. React Context is needed for going between create, read, and update views.
-5. I could create an ad and store it in a postgresql database but I don't have much time. I will use Firestore for the moment.
+2. There are a lot of things to take note of so I created a Trello board to keep track of work.
+3. The products are outlined in the json. Every product gets displayed from this ONE JSON file. I am not dealing with the CRUD part for products.
+4. React Context is needed for going between create, read, and update views?
+5. I could create an ad and store it in a postgresql database but I don't have much time. I will use Firestore for the moment?
 6. If no ads exist for a product on the Read page, then show a simple text message.
-7. I have added framer-motion and react-transition-group.
 
 ## Changes
 
 1. I added a productId to the shop_data array items.
 2. I used Vite instead of Create React App as it's deprecated / not encouraged by React.
-3. Typescript can't be used but I added prop-types.
-4. If i'm going to be using react context, i wanted to use react-query for fetching from firebase.
+3. I wanted to use react-query for fetching from firebase.
+4. I have added framer-motion and react-transition-group for simple animations.
+
+## Post Challenge
+
+1. I would like to make it more responsive for mobile views.
+2. I would spend more time with testing.
+3. I would use Typescript and SCSS / Tailwind for better styling methods.

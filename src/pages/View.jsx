@@ -9,7 +9,7 @@ import { useState } from "react";
 import { Modal } from "src/components/Modal";
 import { Button } from "src/components/Button";
 
-export const Product = () => {
+export const View = () => {
   const { shopData } = useProduct();
   const { modalOpen, setModalOpen } = useModal();
   let { id } = useParams();
@@ -67,12 +67,10 @@ export const Product = () => {
       <Modal title={modalMode} isOpen={modalOpen} setIsOpen={setModalOpen}>
         {renderModal(modalMode)}
       </Modal>
-      <h1>{product.productName ?? "Not Found"} </h1>
-      <Button
-        text="Create New Ad"
-        styling={styles.createBtn}
-        onClick={handleCreate}
-      />
+      <div className={styles.titleBox}>
+        <h1>{product.productName ?? "Not Found"} </h1>
+        <Button text="Create New Ad" onClick={handleCreate} />
+      </div>
 
       {data.length === 0 ? (
         <p className={styles.noAds}>
@@ -90,7 +88,8 @@ export const Product = () => {
                   headline={ad.headline}
                 />
                 <div className={styles.actions}>
-                  <h2>Ad Actions</h2>
+                  <h2>Product: {product.productName}</h2>
+                  <p>What action would you like to perform?</p>
                   <div>
                     <Button text="Edit Ad" onClick={() => handleEdit(ad)} />
                     <Button text="Delete Ad" onClick={() => handleDelete(ad)} />

@@ -6,7 +6,7 @@ import { Home } from "./pages/Home";
 import Root from "./routes/root";
 import { Error } from "./pages/Error";
 import ErrorBoundary from "./components/ErrorBoundary";
-import { Product } from "./pages/Product";
+import { View } from "./pages/View";
 import {
   NotificationContextProvider,
   ShopDataContextProvider,
@@ -26,7 +26,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/view/:id",
-        element: <Product />,
+        element: <View />,
       },
     ],
   },

@@ -154,6 +154,10 @@
   color: var(--fb-main-text);
 }
 
+.fbBtn:hover {
+  background-color: var(--fb-btn);
+}
+
 @media (width < 768px) {
   .headliner {
     font-size: 0.9rem;
@@ -164,5 +168,8 @@
   .adBtn {
     font-size: 12px;
     padding: 0 8px;
+  }
+  .card {
+    width: 100%;
   }
 }
