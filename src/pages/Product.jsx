@@ -1,5 +1,4 @@
 import { useParams } from "react-router-dom";
-import { randomID } from "src/utils/randomID";
 import { fetchAds } from "src/store/Firebase";
 import { useQuery } from "@tanstack/react-query";
 import { Ad } from "src/components/Ad/Ad";
@@ -50,7 +49,7 @@ export const Product = () => {
     }
 
     if (type === "DELETE") {
-      return <DeleteView setModalOpen={setModalOpen} ad={ad} />;
+      return <DeleteView setModalOpen={setModalOpen} docId={ad.id} />;
     } else {
       return <div>There was an error rendering correct modal</div>;
     }
@@ -82,7 +81,7 @@ export const Product = () => {
       ) : (
         data.map((ad) => {
           return (
-            <div key={randomID()}>
+            <div key={ad.id}>
               <div className={styles.adInfo}>
                 <Ad
                   cta={ad.cta}

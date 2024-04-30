@@ -2,19 +2,35 @@ import { useNotification } from "src/hooks";
 import styles from "./View.module.css";
 import { useNavigate } from "react-router-dom";
 import { Button } from "../Button";
+import { useMutation } from "@tanstack/react-query";
+import { deleteAd } from "src/store/Firebase";
 
-export const DeleteView = ({ setModalOpen }) => {
+export const DeleteView = ({ docId, setModalOpen }) => {
   const navigate = useNavigate();
   const { notify } = useNotification();
 
-  const handleDelete = async () => {
-    try {
+  const { mutate } = useMutation({
+    mutationFn: deleteAd,
+    onSuccess: () => {
       setModalOpen(false);
-      navigate("/");
       notify({
         type: "success",
-        title: "The ad has been deleted",
+        title: "The ad was deleted",
       });
+      navigate("/");
+    },
+    onError: (err) => {
+      console.log(err);
+      notify({
+        type: "error",
+        title: "There was a problem deleting the ad",
+      });
+    },
+  });
+
+  const handleDelete = async () => {
+    try {
+      mutate(docId);
     } catch (err) {
       notify({
         type: "error",
