@@ -1,12 +1,27 @@
 # Sports Goods Shop
 
+## Set Up
+
+Create an `.env` file in the base of the project and fill the following fields to access Firebase db:
+
+```
+VITE_API_KEY=
+VITE_AUTH_DOMAIN=
+VITE_PROJECT_ID=
+VITE_STORAGE_BUCKET=
+VITE_MESSAGE_SENDER_ID=
+VITE_APP_ID=
+```
+
+Then simply run `npm i` and `npm run dev` on your machine.
+
 ## Description
 
 You want to run ads on Facebook to get people's awareness for your online store for sports equipment. Create an internal tool that helps you create and manage your sport good ads for Facebook.
 
 You should be able to create multiple posts for a specific product.
 
-This CRUD tool enables you to:
+This CRUD tool should enable you to:
 
 1. list all your Facebook ads
 2. create new ones
@@ -56,3 +71,6 @@ Structure of Ad:
 1. I would like to make it more responsive for mobile views.
 2. I would spend more time with testing.
 3. I would use Typescript and SCSS / Tailwind for better styling methods.
+4. Trello was an important part of keeping my direction in check.
+
+<img src="src/assets/trello.png" alt="trello board" width="50%" />
