@@ -140,7 +140,7 @@
   padding: 6px 14px;
 }
 
-.actions > button {
+.fbBtn {
   align-items: center;
   background-color: unset;
   gap: 0.5rem;
@@ -152,4 +152,17 @@
   justify-content: center;
   padding: 0 2px;
   color: var(--fb-main-text);
+}
+
+@media (width < 768px) {
+  .headliner {
+    font-size: 0.9rem;
+  }
+  .description {
+    font-size: 0.7rem;
+  }
+  .adBtn {
+    font-size: 12px;
+    padding: 0 8px;
+  }
 }

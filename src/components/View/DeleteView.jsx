@@ -1,9 +1,9 @@
 import { useNotification } from "src/hooks";
-import { Modal } from "../Modal";
 import styles from "./View.module.css";
 import { useNavigate } from "react-router-dom";
+import { Button } from "../Button";
 
-export const DeleteModal = ({ modalOpen, setModalOpen }) => {
+export const DeleteView = ({ setModalOpen }) => {
   const navigate = useNavigate();
   const { notify } = useNotification();
 
@@ -25,16 +25,16 @@ export const DeleteModal = ({ modalOpen, setModalOpen }) => {
     }
   };
   return (
-    <Modal title="Delete Ad" isOpen={modalOpen} setIsOpen={setModalOpen}>
-      <div className={styles.modalChild}>
-        <p>Are you sure you want to delete this ad?</p>
-        <div>
-          <button onClick={handleDelete}>Delete</button>
-          <button className={styles.cancel} onClick={() => setModalOpen(false)}>
-            Cancel
-          </button>
-        </div>
+    <div className={styles.modalChild}>
+      <p>Are you sure you want to delete this ad?</p>
+      <div>
+        <Button onClick={handleDelete} text="Delete" />
+        <Button
+          styling={styles.cancel}
+          onClick={() => setModalOpen(false)}
+          text="Cancel"
+        />
       </div>
-    </Modal>
+    </div>
   );
 };

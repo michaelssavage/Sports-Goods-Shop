@@ -1,0 +1,35 @@
+.formItem {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+
+.formItem textarea {
+  resize: vertical;
+}
+
+.urlInput {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 0.25rem;
+  margin: 0.5rem 0;
+}
+
+.urlInput input {
+  width: 100%;
+}
+
+.urlInput button {
+  width: 15%;
+}
+
+.formBtn {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.8rem;
+}
+
+.addMoreBtn {
+  margin-left: auto;
+  width: 15%;
+}

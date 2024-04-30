@@ -8,6 +8,7 @@ import {
 import styles from "./Ad.module.css";
 import { Carousel } from "../Carousel";
 import { useState } from "react";
+import { Button } from "../Button";
 
 export const Ad = ({
   cta = "View Services",
@@ -60,21 +61,15 @@ export const Ad = ({
       <div className={styles.preview}>
         <div className={styles.content}>
           <a className={styles.displayLink}>www.maxssportinggoods.com</a>
-          <h2>{headline}</h2>
+          <h2 className={styles.headliner}> {headline}</h2>
           <p className={styles.description}>{description}</p>
         </div>
-        <button className={styles.adBtn}>{cta}</button>
+        <Button styling={styles.adBtn} text={cta} />
       </div>
       <div className={styles.actions}>
-        <button>
-          <ThumbIcon /> Like
-        </button>
-        <button>
-          <CommentIcon /> Comment
-        </button>
-        <button>
-          <ShareIcon /> Share
-        </button>
+        <Button styling={styles.fbBtn} icon={<ThumbIcon />} text="Like" />
+        <Button styling={styles.fbBtn} icon={<CommentIcon />} text="Comment" />
+        <Button styling={styles.fbBtn} icon={<ShareIcon />} text="Share" />
       </div>
     </div>
   );

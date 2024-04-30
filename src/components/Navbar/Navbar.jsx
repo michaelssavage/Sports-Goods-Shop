@@ -1,27 +1,12 @@
-import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import { useProduct } from "src/hooks";
 
 export const Navbar = () => {
   const { shopData } = useProduct();
-  const [scrolling, setScrolling] = useState(false);
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const handleScroll = () => {
-    if (window.scrollY > 80) {
-      setScrolling(true);
-    } else {
-      setScrolling(false);
-    }
-  };
 
   return (
-    <nav className={`${styles.navbar} ${scrolling ? styles.scroll : ""}`}>
+    <nav className={styles.navbar}>
       <div className={styles.navContainer}>
         <Link to="/">
           <img
@@ -39,7 +24,7 @@ export const Navbar = () => {
                 `${isActive ? styles.active : ""} ${styles.header}`
               }
             >
-              <p>Home</p>
+              Home
             </NavLink>
           </li>
         </ul>

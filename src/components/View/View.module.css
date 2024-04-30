@@ -11,11 +11,36 @@
 
 .cancel {
   background-color: var(--white);
-  color: var(--white);
+  color: var(--brand-blue);
   border: 1px solid var(--brand-blue);
 }
 .cancel:hover {
   color: var(--white);
   background-color: var(--brand-blue-hover);
   border: 1px solid var(--brand-blue-hover);
+}
+
+.createContainer {
+  margin-top: 2rem;
+}
+
+.createContainer > h2 {
+  text-align: center;
+}
+
+.formItem {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  width: 100%;
+  margin: 1rem 0.5rem;
+}
+
+.formItem label {
+  width: 20%;
+}
+
+.formItem input {
+  width: 80%;
+  border-radius: 0.25rem;
 }

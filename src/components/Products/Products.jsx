@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./Products.module.css";
 import { randomID } from "src/utils/randomID";
+import { Button } from "../Button";
 
 const generateBenefits = (description) => {
   const items = description.split("\n- ");
@@ -36,7 +37,7 @@ export const Products = ({ products }) => {
                   </div>
                   <p className={styles.price}>€{product.price}</p>
                   <Link to={`/view/${product.productId}`}>
-                    <button className={styles.button}>Open</button>
+                    <Button styling={styles.button} text="Open" />
                   </Link>
                 </div>
               </div>

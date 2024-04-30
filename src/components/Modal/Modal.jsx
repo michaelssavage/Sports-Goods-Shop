@@ -3,6 +3,7 @@ import { createPortal } from "react-dom";
 import { CrossIcon } from "../Icons";
 import { CSSTransition } from "react-transition-group";
 import styles from "./Modal.module.css";
+import { Button } from "../Button";
 
 export const Modal = ({ isOpen, setIsOpen, title, children }) => {
   const backdrop = useRef(null);
@@ -53,9 +54,11 @@ export const Modal = ({ isOpen, setIsOpen, title, children }) => {
           unmountOnExit
         >
           <div className={styles.container} ref={container} role="dialog">
-            <button className={styles.close} onClick={() => setIsOpen(false)}>
-              <CrossIcon />
-            </button>
+            <Button
+              icon={<CrossIcon />}
+              styling={styles.close}
+              onClick={() => setIsOpen(false)}
+            />
 
             <h3 className={styles.title}>{title}</h3>
             <div>{children}</div>

@@ -4,9 +4,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./assets/styles/index.css";
 import { Home } from "./pages/Home";
 import Root from "./routes/root";
-import { ErrorPage } from "./pages/ErrorPage";
+import { Error } from "./pages/Error";
 import ErrorBoundary from "./components/ErrorBoundary";
-import { View } from "./pages/View";
+import { Product } from "./pages/Product";
 import {
   NotificationContextProvider,
   ShopDataContextProvider,
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
-    errorElement: <ErrorPage />,
+    errorElement: <Error />,
     children: [
       {
         path: "/",
@@ -26,7 +26,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/view/:id",
-        element: <View />,
+        element: <Product />,
       },
     ],
   },

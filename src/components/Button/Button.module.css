@@ -1,0 +1,28 @@
+.btn {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+  color: var(--white);
+  background-color: var(--brand-blue);
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+.btn:hover {
+  background-color: var(--brand-blue-hover);
+}
+.btn:focus,
+.btn:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.ghost {
+  background-color: var(--white);
+  border: 1px solid var(--brand-blue);
+  color: var(--brand-blue);
+}
+.ghost:hover {
+  color: var(--white);
+}

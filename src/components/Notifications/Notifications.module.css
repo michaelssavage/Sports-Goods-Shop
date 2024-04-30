@@ -54,6 +54,7 @@
   border: none;
   cursor: pointer;
   background-color: transparent;
+  border: 1px solid transparent;
 }
 
 .close:hover {

@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef } from "react";
 import { CrossIcon, TickIcon, WarningTriangle } from "src/components/Icons";
 import styles from "./Notifications.module.css";
+import { Button } from "../Button";
 
 const displayDuration = 5000;
 
@@ -53,9 +54,11 @@ export const NotificationItem = ({ notification, onRemove }) => {
         {type === "error" ? <WarningTriangle /> : <TickIcon />}
 
         <h5 className={styles.title}>{title}</h5>
-        <button className={styles.close} onClick={removeItem}>
-          <CrossIcon size="20" color="#fafffc" />
-        </button>
+        <Button
+          styling={styles.close}
+          onClick={removeItem}
+          icon={<CrossIcon size="20" color="#fafffc" />}
+        />
       </div>
     </div>
   );

@@ -1,17 +1,3 @@
-.scroll {
-  background-color: var(--brand-orange);
-  animation: changeColor 0.5s;
-}
-
-@keyframes changeColor {
-  0% {
-    background-color: transparent;
-  }
-  100% {
-    background-color: var(--brand-orange);
-  }
-}
-
 .navbar {
   position: fixed;
   top: 0;
@@ -19,10 +5,11 @@
   margin: auto;
   width: 100%;
   z-index: 100;
+  background-color: var(--black);
 }
 
 .navContainer {
-  margin: 1rem 5%;
+  margin: 0.5rem 5%;
   display: flex;
   flex-direction: row;
 }
@@ -44,6 +31,7 @@
   font-size: 1.2rem;
   text-transform: uppercase;
   z-index: 20;
+  color: var(--brand-orange);
 }
 
 .active {
