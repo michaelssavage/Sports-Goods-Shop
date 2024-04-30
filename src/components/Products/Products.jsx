@@ -1,4 +1,3 @@
-import { PropTypes } from "prop-types";
 import { Link } from "react-router-dom";
 import styles from "./Products.module.css";
 import { randomID } from "src/utils/randomID";
@@ -47,16 +46,4 @@ export const Products = ({ products }) => {
       </div>
     </div>
   );
-};
-
-Products.propTypes = {
-  products: PropTypes.arrayOf(
-    PropTypes.shape({
-      productId: PropTypes.number,
-      productName: PropTypes.string,
-      productDescription: PropTypes.string,
-      productImage: PropTypes.string,
-      price: PropTypes.number,
-    })
-  ),
 };

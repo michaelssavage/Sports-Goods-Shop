@@ -1,6 +1,5 @@
 import { createContext, useMemo, useState } from "react";
 import data from "src/assets/shop_data.json";
-import PropTypes from "prop-types";
 
 export const ShopDataContext = createContext({
   name: "",
@@ -18,8 +17,4 @@ export const ShopDataContextProvider = ({ children }) => {
       {children}
     </ShopDataContext.Provider>
   );
-};
-
-ShopDataContextProvider.propTypes = {
-  children: PropTypes.node,
 };

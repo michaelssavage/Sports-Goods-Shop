@@ -1,0 +1,21 @@
+.modalChild {
+  margin-top: 2rem;
+}
+
+.modalChild div {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.cancel {
+  background-color: #fafffc;
+  color: #646cff;
+  border: 1px solid #646cff;
+}
+.cancel:hover {
+  color: #fafffc;
+  background-color: #4b51c0;
+  border: 1px solid #4b51c0;
+}

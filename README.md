@@ -42,7 +42,8 @@ Structure of Ad:
 3. The products are outlined in the json. Every product gets displayed from this 1 JSON file.
 4. React Context is needed for going between create, read, and update views.
 5. I could create an ad and store it in a postgresql database but I don't have much time. I will use Firestore for the moment.
-6. If no ads exist for a product on the Read page, then show a notification.
+6. If no ads exist for a product on the Read page, then show a simple text message.
+7. I have added framer-motion and react-transition-group.
 
 ## Changes
 

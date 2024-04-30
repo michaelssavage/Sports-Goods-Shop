@@ -1,10 +1,10 @@
-import { useContext, useEffect, useState } from "react";
-import { ShopDataContext } from "src/context/products.context";
+import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import styles from "./Navbar.module.css";
+import { useProduct } from "src/hooks";
 
 export const Navbar = () => {
-  const { shopData } = useContext(ShopDataContext);
+  const { shopData } = useProduct();
   const [scrolling, setScrolling] = useState(false);
 
   useEffect(() => {

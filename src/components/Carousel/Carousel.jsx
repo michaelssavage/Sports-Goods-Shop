@@ -1,7 +1,6 @@
-import { PropTypes } from "prop-types";
 import { motion, AnimatePresence } from "framer-motion";
 import styles from "./Carousel.module.css";
-import { LeftIcon, RightIcon } from "../icons";
+import { LeftIcon, RightIcon } from "../Icons";
 
 export const Carousel = ({
   images,
@@ -74,12 +73,4 @@ export const Carousel = ({
       </div>
     </div>
   );
-};
-
-Carousel.propTypes = {
-  images: PropTypes.arrayOf(PropTypes.string),
-  direction: PropTypes.string,
-  currentIndex: PropTypes.number,
-  handleNext: PropTypes.func,
-  handlePrevious: PropTypes.func,
 };

@@ -4,9 +4,8 @@ import {
   GlobeIcon,
   ShareIcon,
   DotsIcon,
-} from "src/components/icons";
+} from "src/components/Icons";
 import styles from "./Ad.module.css";
-import { PropTypes } from "prop-types";
 import { Carousel } from "../Carousel";
 import { useState } from "react";
 
@@ -79,11 +78,4 @@ export const Ad = ({
       </div>
     </div>
   );
-};
-
-Ad.propTypes = {
-  cta: PropTypes.string,
-  img: PropTypes.arrayOf(PropTypes.string),
-  description: PropTypes.string,
-  headline: PropTypes.string,
 };

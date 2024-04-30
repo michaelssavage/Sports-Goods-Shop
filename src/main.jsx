@@ -5,10 +5,14 @@ import "./assets/styles/index.css";
 import { Home } from "./pages/Home";
 import Root from "./routes/root";
 import { ErrorPage } from "./pages/ErrorPage";
-import { ShopDataContextProvider } from "./context/products.context";
-import { Create } from "./pages/Create";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { View } from "./pages/View";
+import {
+  NotificationContextProvider,
+  ShopDataContextProvider,
+  ModalContextProvider,
+} from "src/context";
+import { Notifications } from "./components/Notifications";
 
 const router = createBrowserRouter([
   {
@@ -21,10 +25,6 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/create/:id",
-        element: <Create />,
-      },
-      {
         path: "/view/:id",
         element: <View />,
       },
@@ -34,10 +34,15 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <ShopDataContextProvider>
-      <ErrorBoundary>
-        <RouterProvider router={router} />
-      </ErrorBoundary>
-    </ShopDataContextProvider>
+    <NotificationContextProvider>
+      <ShopDataContextProvider>
+        <ModalContextProvider>
+          <ErrorBoundary>
+            <RouterProvider router={router} />
+          </ErrorBoundary>
+        </ModalContextProvider>
+      </ShopDataContextProvider>
+      <Notifications />
+    </NotificationContextProvider>
   </React.StrictMode>
 );

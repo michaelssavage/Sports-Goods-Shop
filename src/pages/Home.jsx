@@ -1,9 +1,8 @@
-import { useContext } from "react";
-import { ShopDataContext } from "src/context/products.context";
 import { Products } from "src/components/Products";
+import { useProduct } from "src/hooks";
 
 export const Home = () => {
-  const { shopData } = useContext(ShopDataContext);
+  const { shopData } = useProduct();
 
   return (
     <main className="page">
