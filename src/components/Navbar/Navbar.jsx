@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { ShopDataContext } from "src/context/products.context";
 import { Link, NavLink } from "react-router-dom";
-import styles from "src/assets/styles/Navbar.module.css";
+import styles from "./Navbar.module.css";
 
 export const Navbar = () => {
   const { shopData } = useContext(ShopDataContext);
@@ -40,16 +40,6 @@ export const Navbar = () => {
               }
             >
               <p>Home</p>
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/create"
-              className={({ isActive }) =>
-                `${isActive ? styles.active : ""} ${styles.header}`
-              }
-            >
-              Create New Ad
             </NavLink>
           </li>
         </ul>

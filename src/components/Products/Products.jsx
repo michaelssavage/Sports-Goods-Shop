@@ -1,6 +1,6 @@
 import { PropTypes } from "prop-types";
 import { Link } from "react-router-dom";
-import styles from "src/assets/styles/Products.module.css";
+import styles from "./Products.module.css";
 import { randomID } from "src/utils/randomID";
 
 const generateBenefits = (description) => {

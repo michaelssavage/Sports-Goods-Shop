@@ -41,7 +41,7 @@ Structure of Ad:
 2. There are a lot to take note of so I created a Trello board to keep track of work.
 3. The products are outlined in the json. Every product gets displayed from this 1 JSON file.
 4. React Context is needed for going between create, read, and update views.
-5. I could create an ad and store it in a postgresql database but I don't have much time. I will use a CSV instead.
+5. I could create an ad and store it in a postgresql database but I don't have much time. I will use Firestore for the moment.
 6. If no ads exist for a product on the Read page, then show a notification.
 
 ## Changes
@@ -49,3 +49,4 @@ Structure of Ad:
 1. I added a productId to the shop_data array items.
 2. I used Vite instead of Create React App as it's deprecated / not encouraged by React.
 3. Typescript can't be used but I added prop-types.
+4. If i'm going to be using react context, i wanted to use react-query for fetching from firebase.

@@ -1,42 +1,73 @@
-import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { ShopDataContext } from "src/context/products.context";
-import { collection, getDocs } from "firebase/firestore";
+import { getDocs, where, query } from "firebase/firestore";
 import { randomID } from "src/utils/randomID";
-import { db } from "src/store/Firebase";
+import { collectionName } from "src/store/Firebase";
+import { useQuery } from "@tanstack/react-query";
+import { Ad } from "src/components/Ad/Ad";
+import { useContext } from "react";
+import { ShopDataContext } from "src/context/products.context";
+import styles from "src/assets/styles/View.module.css";
 
 export const View = () => {
   const { shopData } = useContext(ShopDataContext);
   let { id } = useParams();
-  const [product] = useState(
-    shopData.products.find((p) => p.productId === parseInt(id))
-  );
+  const product = shopData.products.find((p) => p.productId === parseInt(id));
 
-  const [ads, setAds] = useState([]);
+  const fetchAds = async () => {
+    const q = query(
+      collectionName,
+      where("productId", "==", product.productId)
+    );
+    const docs = await getDocs(q).then((querySnapshot) => {
+      return querySnapshot.docs.map((doc) => ({
+        ...doc.data(),
+        id: doc.id,
+      }));
+    });
+    return docs;
+  };
 
-  useEffect(() => {
-    const fetchAds = async () => {
-      await getDocs(collection(db, "ads")).then((querySnapshot) => {
-        const newData = querySnapshot.docs.map((doc) => ({
-          ...doc.data(),
-          id: doc.id,
-        }));
-        setAds(newData);
-      });
-      console.log(ads);
-    };
-    fetchAds();
-    console.log(ads);
-  }, [ads]);
+  const { isPending, error, data } = useQuery({
+    queryKey: ["userAds"],
+    queryFn: fetchAds,
+  });
+
+  if (isPending) return <span>Loading...</span>;
+
+  if (error) {
+    console.log(error);
+    return <span>{`An error has occurred: ${error.message}`}</span>;
+  }
 
   return (
-    <main>
+    <main className={styles.container}>
       <h1>{product.productName ?? "Not Found"} </h1>
-      <div>
-        {ads.map((ad) => {
-          return <p key={randomID()}>{ad.description}</p>;
-        })}
-      </div>
+      <button className={styles.createBtn}>Create New Ad</button>
+      {data.length === 0 ? (
+        <p className={styles.noAds}>
+          No Ads have been created for this product yet
+        </p>
+      ) : (
+        data.map((ad) => {
+          return (
+            <div key={randomID()} className={styles.adInfo}>
+              <Ad
+                cta={ad.cta}
+                img={ad.pics}
+                description={ad.description}
+                headline={ad.headline}
+              />
+              <div className={styles.actions}>
+                <h2>Ad Actions</h2>
+                <div>
+                  <button>Update</button>
+                  <button>Delete</button>
+                </div>
+              </div>
+            </div>
+          );
+        })
+      )}
     </main>
   );
 };

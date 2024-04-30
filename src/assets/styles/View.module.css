@@ -1,0 +1,36 @@
+.container {
+  width: 100%;
+}
+
+.container h1 {
+  text-align: center;
+}
+
+.createBtn {
+  margin: 1rem;
+  display: block;
+  margin-left: auto;
+}
+
+.noAds {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 1.2rem;
+}
+
+.adInfo {
+  display: flex;
+  flex-direction: row;
+  place-items: center;
+  gap: 4rem;
+}
+
+.actions > h2 {
+  margin-bottom: 0.5rem;
+}
+
+.actions > div {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
