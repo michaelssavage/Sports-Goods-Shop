@@ -62,6 +62,16 @@ h1 {
   margin: 20vh 4rem;
 }
 
+#error-page p {
+  margin: 1rem 0;
+}
+
+#error-page div {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
 .container {
   display: flex;
   flex-flow: row wrap;

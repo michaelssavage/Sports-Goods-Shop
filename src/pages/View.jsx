@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { fetchAds } from "src/store/Firebase";
 import { useQuery } from "@tanstack/react-query";
 import { Ad } from "src/components/Ad/Ad";
-import styles from "src/assets/styles/View.module.css";
+import styles from "src/assets/styles/page.module.css";
 import { CreateView, DeleteView, EditView } from "src/components/View";
 import { useModal, useShopData } from "src/hooks";
 import { useState } from "react";
