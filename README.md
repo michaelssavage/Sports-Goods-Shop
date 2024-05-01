@@ -1,6 +1,8 @@
 # Sports Goods Shop
 
-## Set Up
+Project is live at: https://max-sports-goods-shop.netlify.app/
+
+## Local Set Up
 
 Create an `.env` file in the base of the project and fill the following fields to access Firebase db:
 
@@ -63,7 +65,7 @@ Structure of Ad:
 
 1. I added a productId to the shop_data array items.
 2. I used Vite instead of Create React App as it's deprecated / not encouraged by React.
-3. I wanted to use react-query for fetching from firebase.
+3. I used react-query for fetching from firebase.
 4. I have added framer-motion and react-transition-group for simple animations.
 
 ## Post Challenge
