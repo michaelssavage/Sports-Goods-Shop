@@ -4,7 +4,7 @@ import {
   GlobeIcon,
   ShareIcon,
   DotsIcon,
-} from "src/components/Icons";
+} from "src/components/Icon";
 import styles from "./Ad.module.css";
 import { Carousel } from "../Carousel";
 import { useState } from "react";

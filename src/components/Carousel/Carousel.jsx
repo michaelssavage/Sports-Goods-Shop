@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import styles from "./Carousel.module.css";
-import { LeftIcon, RightIcon } from "../Icons";
+import { LeftIcon, RightIcon } from "../Icon";
 
 export const Carousel = ({
   images,

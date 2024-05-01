@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
-import { CrossIcon } from "../Icons";
+import { CrossIcon } from "../Icon";
 import { CSSTransition } from "react-transition-group";
 import styles from "./Modal.module.css";
 import { Button } from "../Button";

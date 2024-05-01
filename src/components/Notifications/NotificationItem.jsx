@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef } from "react";
-import { CrossIcon, TickIcon, WarningTriangle } from "src/components/Icons";
+import { CrossIcon, TickIcon, WarningTriangle } from "src/components/Icon";
 import styles from "./Notifications.module.css";
 import { Button } from "../Button";
 
