@@ -1,8 +1,8 @@
 import { Products } from "src/components/Products";
-import { useProduct } from "src/hooks";
+import { useShopData } from "src/hooks";
 
 export const Home = () => {
-  const { shopData } = useProduct();
+  const { shopData } = useShopData();
 
   return (
     <main className="page">

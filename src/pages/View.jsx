@@ -4,13 +4,13 @@ import { useQuery } from "@tanstack/react-query";
 import { Ad } from "src/components/Ad/Ad";
 import styles from "src/assets/styles/View.module.css";
 import { CreateView, DeleteView, EditView } from "src/components/View";
-import { useModal, useProduct } from "src/hooks";
+import { useModal, useShopData } from "src/hooks";
 import { useState } from "react";
 import { Modal } from "src/components/Modal";
 import { Button } from "src/components/Button";
 
 export const View = () => {
-  const { shopData } = useProduct();
+  const { shopData } = useShopData();
   const { modalOpen, setModalOpen } = useModal();
   let { id } = useParams();
 

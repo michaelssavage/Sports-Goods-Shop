@@ -1,3 +1,3 @@
 export { useNotification } from "./use-notification.hook";
-export { useProduct } from "./use-product.hook";
+export { useShopData } from "./use-shop.hook";
 export { useModal } from "./use-model.hook";

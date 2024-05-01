@@ -1,21 +1,21 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styles from "./Navbar.module.css";
-import { useProduct } from "src/hooks";
+import { useShopData } from "src/hooks";
 
 export const Navbar = () => {
-  const { shopData } = useProduct();
+  const { shopData } = useShopData();
 
   return (
     <nav className={styles.navbar}>
       <div className={styles.navContainer}>
-        <Link to="/">
+        <NavLink to="/">
           <img
             src={shopData.logo}
             alt="sports good shop logo"
             height="65px"
             width="90px"
           />
-        </Link>
+        </NavLink>
         <ul className={styles.navItems}>
           <li>
             <NavLink

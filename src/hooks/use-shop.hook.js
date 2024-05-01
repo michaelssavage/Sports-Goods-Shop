@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { ShopDataContext } from "src/context";
 
-export const useProduct = () => {
+export const useShopData = () => {
   return useContext(ShopDataContext);
 };
