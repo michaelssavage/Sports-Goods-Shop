@@ -8,7 +8,8 @@ export const PicInput = ({ pics, setPics }) => {
     setPics(newInputs);
   };
 
-  const handleAddPicInput = () => {
+  const handleAddPicInput = (event) => {
+    event.preventDefault();
     setPics((prevInputs) => [...prevInputs, ""]);
   };
 

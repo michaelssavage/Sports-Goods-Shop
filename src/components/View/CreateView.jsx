@@ -7,7 +7,7 @@ import { useState } from "react";
 import { createNewAd } from "src/store/Firebase";
 import { useNotification } from "src/hooks";
 
-export const CreateView = ({ product, setModalOpen }) => {
+export const CreateView = ({ product, setModalOpen, refetch }) => {
   const { notify } = useNotification();
 
   const [formData, setFormData] = useState({
@@ -36,6 +36,7 @@ export const CreateView = ({ product, setModalOpen }) => {
         type: "success",
         title: "A new ad has been created",
       });
+      refetch();
     },
     onError: () => {
       notify({

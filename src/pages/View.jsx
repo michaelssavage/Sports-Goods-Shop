@@ -20,7 +20,7 @@ export const View = () => {
 
   const [ad, setAd] = useState({});
 
-  const { isPending, error, data } = useQuery({
+  const { isPending, error, data, refetch } = useQuery({
     queryKey: ["ads", product.productId],
     queryFn: () => fetchAds(product.productId),
   });
@@ -42,10 +42,16 @@ export const View = () => {
 
   const renderModal = (type) => {
     if (type === "CREATE") {
-      return <CreateView setModalOpen={setModalOpen} product={product} />;
+      return (
+        <CreateView
+          setModalOpen={setModalOpen}
+          product={product}
+          refetch={refetch}
+        />
+      );
     }
     if (type === "EDIT") {
-      return <EditView setModalOpen={setModalOpen} ad={ad} />;
+      return <EditView setModalOpen={setModalOpen} ad={ad} refetch={refetch} />;
     }
 
     if (type === "DELETE") {
@@ -88,7 +94,6 @@ export const View = () => {
                   headline={ad.headline}
                 />
                 <div className={styles.actions}>
-                  <h2>Product: {product.productName}</h2>
                   <p>What action would you like to perform?</p>
                   <div>
                     <Button text="Edit Ad" onClick={() => handleEdit(ad)} />

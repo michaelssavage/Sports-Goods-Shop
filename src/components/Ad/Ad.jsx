@@ -7,7 +7,6 @@ import {
 } from "src/components/Icon";
 import styles from "./Ad.module.css";
 import { Carousel } from "../Carousel";
-import { useState } from "react";
 import { Button } from "../Button";
 
 export const Ad = ({
@@ -16,24 +15,6 @@ export const Ad = ({
   description,
   headline,
 }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [direction, setDirection] = useState(null);
-
-  const handleNext = () => {
-    setDirection("right");
-    setCurrentIndex((prevIndex) =>
-      prevIndex + 1 === img.length ? 0 : prevIndex + 1
-    );
-  };
-
-  const handlePrevious = () => {
-    setDirection("left");
-
-    setCurrentIndex((prevIndex) =>
-      prevIndex - 1 < 0 ? img.length - 1 : prevIndex - 1
-    );
-  };
-
   return (
     <div className={styles.card}>
       <div className={styles.header}>
@@ -51,13 +32,7 @@ export const Ad = ({
         </div>
       </div>
       <p className={styles.cta}>{headline}</p>
-      <Carousel
-        images={img}
-        direction={direction}
-        currentIndex={currentIndex}
-        handleNext={handleNext}
-        handlePrevious={handlePrevious}
-      />
+      <Carousel images={img} />
       <div className={styles.preview}>
         <div className={styles.content}>
           <a className={styles.displayLink}>www.maxssportinggoods.com</a>

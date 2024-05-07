@@ -1,14 +1,9 @@
 import { motion, AnimatePresence } from "framer-motion";
 import styles from "./Carousel.module.css";
 import { LeftIcon, RightIcon } from "../Icon";
+import { useState } from "react";
 
-export const Carousel = ({
-  images,
-  direction,
-  currentIndex,
-  handleNext,
-  handlePrevious,
-}) => {
+export const Carousel = ({ images }) => {
   const slideVariants = {
     hiddenRight: {
       x: "100%",
@@ -22,11 +17,12 @@ export const Carousel = ({
       x: "0",
       opacity: 1,
       transition: {
-        duration: 0.25,
+        duration: 0.5,
       },
     },
     exit: {
       opacity: 0,
+      scale: 0.1,
       transition: {
         duration: 0.1,
       },
@@ -37,6 +33,23 @@ export const Carousel = ({
       scale: 1.2,
       backgroundColor: "#fff",
     },
+  };
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [direction, setDirection] = useState(null);
+
+  const handleNext = () => {
+    setDirection("right");
+    setCurrentIndex((prevIndex) =>
+      prevIndex + 1 === images.length ? 0 : prevIndex + 1
+    );
+  };
+
+  const handlePrevious = () => {
+    setDirection("left");
+
+    setCurrentIndex((prevIndex) =>
+      prevIndex - 1 < 0 ? images.length - 1 : prevIndex - 1
+    );
   };
 
   return (

@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, ScrollRestoration } from "react-router-dom";
 import { Navbar } from "../components/Navbar";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
@@ -10,6 +10,7 @@ export default function Root() {
       <div id="layout">
         <QueryClientProvider client={queryClient}>
           <Outlet />
+          <ScrollRestoration />
         </QueryClientProvider>
       </div>
     </>

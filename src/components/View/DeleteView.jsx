@@ -17,7 +17,9 @@ export const DeleteView = ({ docId, setModalOpen }) => {
         type: "success",
         title: "The ad was deleted",
       });
-      navigate("/");
+      setTimeout(() => {
+        navigate("/");
+      }, 0);
     },
     onError: (err) => {
       console.log(err);

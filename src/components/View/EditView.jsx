@@ -4,10 +4,10 @@ import { Button } from "../Button";
 import { TextInput, PicInput, TextArea } from "../Form";
 import styles from "./View.module.css";
 import { useState } from "react";
-import { createNewAd } from "src/store/Firebase";
+import { updateAd } from "src/store/Firebase";
 import { useNotification } from "src/hooks";
 
-export const EditView = ({ ad, setModalOpen }) => {
+export const EditView = ({ ad, setModalOpen, refetch }) => {
   const { notify } = useNotification();
 
   const [formData, setFormData] = useState({
@@ -29,15 +29,17 @@ export const EditView = ({ ad, setModalOpen }) => {
   };
 
   const { mutate, isLoading } = useMutation({
-    mutationFn: createNewAd,
+    mutationFn: updateAd,
     onSuccess: () => {
       setModalOpen(false);
       notify({
         type: "success",
         title: "The ad has been updated",
       });
+      refetch();
     },
-    onError: () => {
+    onError: (err) => {
+      console.log(err);
       notify({
         type: "error",
         title: "There was a problem updating the ad",
@@ -55,6 +57,7 @@ export const EditView = ({ ad, setModalOpen }) => {
     } else {
       setError("");
       mutate({
+        id: ad.id,
         productId: ad.productId,
         pics: pics.filter((item) => item !== ""),
         ...formData,

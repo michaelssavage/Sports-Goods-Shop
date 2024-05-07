@@ -5,17 +5,17 @@
   margin: auto;
   overflow: hidden;
 }
-.carouselImages img {
+.carouselImages > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.hideSlides {
-  display: none;
-}
 .slideDirection {
   display: flex;
   justify-content: space-between;
+}
+.hideSlides {
+  display: none;
 }
 .left,
 .right {
