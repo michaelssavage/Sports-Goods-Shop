@@ -30,6 +30,7 @@ export const View = () => {
     setAd(ad);
     setModalOpen(true);
   };
+
   const handleEdit = (ad) => {
     setModalMode("EDIT");
     setAd(ad);
